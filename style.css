@@ -138,7 +138,7 @@ p[data-width="w ide"] {
 
 /* Button */
 .button {
-  display: flex;
+  display: inline-flex;
   border-radius: 100vmax;
   padding: 1.25em 2em;
   text-decoration: none;
@@ -319,10 +319,6 @@ p[data-width="w ide"] {
   margin-inline: auto;
 }
 
-:where(.flow :not(:first-child)) {
-  margin-top: var(--flow-spacer, 3.7em);
-}
-
 .even-columns {
   display: grid;
   gap: 1rem;
@@ -333,6 +329,18 @@ p[data-width="w ide"] {
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
   }
+}
+
+.vertical-align-center {
+  align-items: center;
+}
+
+.justify-self-end {
+  justify-self: end;
+}
+
+:where(.flow :not(:first-child)) {
+  margin-top: var(--flow-spacer, 3.7em);
 }
 
 .text-primary-400 {
